@@ -453,6 +453,70 @@ nav .navi-container img {
 /*================
   MOBILE MENU END
 ==================*/
+.up-button {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.arrow-up {
+  width: 100%;
+  max-width: 1820px;
+  height: 50px;
+  margin: 0 auto;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.arrow-up .upYouGo {
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+  font-size: 24px;
+  background-color: #6cbff7ea;
+  padding: 7px 9px;
+  right: 53px;
+  bottom: 5px;
+  border-radius: 1px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+  position: fixed;
+  z-index: 2000;
+  -webkit-box-shadow: 0 0 2px 1px rgba(42, 170, 255, 0.692);
+          box-shadow: 0 0 2px 1px rgba(42, 170, 255, 0.692);
+  opacity: 0;
+}
+
+.arrow-up .upYouGo:hover {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  background-color: #283e52bd;
+  opacity: 1;
+}
+
+.upYouGo.is-visible {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.upYouGo.is-hidden {
+  opacity: 0;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
 #section-intro {
   margin: 0 auto 100px;
   width: 100%;
@@ -1315,6 +1379,11 @@ iframe:hover {
     border-radius: 5px;
     text-align: center;
   }
+  .arrow-up .upYouGo {
+    right: 19px;
+    font-size: 16px;
+    padding: 5px 7px;
+  }
   #section-intro h3,
   #section-our-work h3,
   #section-join-us h3 {
@@ -1488,6 +1557,12 @@ iframe:hover {
   }
 }
 
+@media only screen and (max-width: 770px) {
+  .arrow-up .upYouGo {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 620px) {
   .slide {
     height: 1260px;
@@ -1547,6 +1622,12 @@ iframe:hover {
   }
   .text-div {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .arrow-up .upYouGo {
+    right: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -78,6 +78,26 @@ $(document).ready(function() {
       }
       prevScrollpos = currentScrollPos;
     };
+    // Show arrow up
+    $(document).ready(function() {
+      let scrollPos = 0;
+      const nav = document.querySelector(".upYouGo");
+
+      function checkPosition() {
+        let windowY = window.scrollY;
+        if (windowY < scrollPos) {
+          nav.classList.add("is-hidden");
+          nav.classList.remove("is-visible");
+        } else {
+          nav.classList.add("is-visible");
+          nav.classList.remove("is-hidden");
+        }
+        scrollPos = windowY;
+      }
+
+      window.addEventListener("scroll", checkPosition);
+    });
+
     // Particles header
     particlesJS.load("particles-js", "particles.json", function() {
       console.log("particles.json loaded...");
